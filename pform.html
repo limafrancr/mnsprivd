@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>começar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="letra-a.png" type="image/x-icon">
+</head>
+<body>
+    <header> 
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Allyuni</h1>
+            </div>
+            <ul>
+                <li><a href="index.html">início</a></li>
+                <li><a href="privacidade.html">Privacidade</a></li>
+                <li><a class = "contt" href="contribuir.html">Contribuir</a></li>
+                <li><a href="comofunciona.html">Como funciona</a></li>
+                <li class="blue"><a href="pform.html">Começar</a></li>
+                
+
+            </ul>
+
+            <div class="menu-icon" onclick="meuShow()">
+                <img src="opensxx.svg" alt="Imagem não suportada">
+            </div>
+
+        </nav>
+    </header>
+
+
+    <div class="itemform">
+        <a name="começar">
+            <form 
+              action="https://formsubmit.co/ajax/franciscolimalima998@gmail.com"
+              method="POST"
+              data-form
+        >
+              <label for="nome">Nome (Insira algo)</label>
+              <input type="text" placeholder="Nome opicional" name="nome" id="nome" required />
+    
+              <label for="email">E-mail (Insira algum)</label>
+              <input type="email" placeholder="Email opcional" name="email" id="email" required />
+    
+              <label for="mensagem">Mensagem</label>
+              <textarea name="mensagem" id="mensagem" placeholder="Uma história, Talvez um segredo?" required></textarea>
+              <button type="submit"  data-button>Enviar</button>
+            </form>
+        </a>
+    </div>
+
+    <div id="cookie-notification" class="CookieMessage" style="display: none;">
+        <div class="CookieMessage-content">
+          <p>Este site utiliza cookies de navegação para a melhor experiência do usuário. <a href="privacidade.html">Saiba mais</a></p>
+          <p><a id="cookie-notification-close" class="CookieMessage-button" href="#">Aceitar</a></p>
+        </div>
+    </div>
+
+    <footer class="fr">
+        <!---<h3 class="infor">Informações</h3>-->
+        <ul class="institucional">
+            <li><a class="contt" href="contribuir.html">Contribuir</a></li>
+            <li><a href="privacidade.html">Privacidade</a></li>
+            <li><a href="index.html">Início</a></li>
+        </ul>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

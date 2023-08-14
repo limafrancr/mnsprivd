@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins sans-serif;
+}
+
+body{
+   /* background: rgb(40,49,74);
+    background: linear-gradient(91deg, rgba(40,49,74,1) 15%, rgba(100,61,138,1) 100%);*/
+    /*background-color: #272a37;*/
+    /*background-color: #224379;*/
+    background-color: #19345f;
+}
+
+header{
+    width: 100%;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 5rem;
+    background-color: transparent;
+}
+
+
+.navbar ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar ul li{
+    margin: 0 15px;
+}
+
+.navbar ul a{
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+}
+.contt{
+    color: #26344a;
+    text-decoration: underline;
+}
+
+.blue{
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.menu-icon{
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon img{
+    width: 30px;
+}
+
+.logo{
+    color: rgb(255, 255, 255);
+}
+
+.escreva h1{
+    
+  /* Primeiro passo: definir um degradê como fundo */
+  background-image: rgb(63,94,251);
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+  /* Segundo passo: apagar do fundo tudo que não estiver imediatamente atrás de texto */
+  background-clip: text;
+  -webkit-background-clip: text; /* Alguns navegadores precisam do prefixo */
+
+  /* Terceiro passo: apagar o texto, deixando apenas o fundo atrás dele */
+  -webkit-text-fill-color: transparent;
+
+  /* Cor que contraste com o degradê, caso o navegador não suporte `background-clip: text` */
+  color: black;
+
+  font-size: 45px;
+  
+
+}
+.escreva{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    height: 500px;
+    width: 100%;
+}
+
+.escreva h2{
+  background-image: linear-gradient(to bottom, rgb(128, 0, 255), rgb(42, 28, 175), turquoise);
+  
+  /* Segundo passo: apagar do fundo tudo que não estiver imediatamente atrás de texto */
+  background-clip: text;
+  -webkit-background-clip: text; /* Alguns navegadores precisam do prefixo */
+
+  /* Terceiro passo: apagar o texto, deixando apenas o fundo atrás dele */
+  -webkit-text-fill-color: white;
+
+  /* Cor que contraste com o degradê, caso o navegador não suporte `background-clip: text` */
+  color: rgb(0, 112, 241);
+}
+
+
+
+.escreva a{
+    text-decoration: none;
+    color: white;
+    background: rgb(63,94,251);
+    
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+/*Efeito maquina de escrever*/
+
+.escreva h2{
+    max-width: 480px;
+    text-align: center;
+    margin: 60px auto;
+    font-family:'Courier New', Courier, monospace;
+    color: #fff;
+}
+.escreva h2:after{
+    content: '|';
+    margin-left: 5px;
+    opacity: 1;
+    animation: pisca .7s infinite;
+}
+
+
+
+
+/* Animação aplicada ao content referente a classe *.titulo-principal* resultando num efeito de cursor piscando. */
+
+@keyframes pisca{
+    0%, 100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+}
+
+@media(max-width: 790px){
+    .menu-icon{
+        display: block;
+    }
+
+    .navbar ul{
+        position: absolute;
+        background-color: rgb(30, 104, 153);
+        top: 78px;
+        left: -100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        width: 100%;
+        transition: 0.3s;
+    }
+
+    .navbar ul.open{ /*Para o JavaScript*/
+        left: 0;
+    }
+
+    .navbar ul li{
+        margin: 5px 0;
+    }
+
+    .imgqr{
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      justify-content: center;
+    }
+
+    .escreva{
+      display: flex;
+      text-align: center;
+    }
+}
+
+
+/*formulario*/
+
+form {
+    width: 100%;
+    max-width: 20rem;
+}
+
+  .itemform{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  label,
+  input,
+  textarea,
+  button {
+    display: block;
+  }
+  
+  input,
+  textarea,
+  button {
+    width: 100%;
+    font: inherit;
+    padding: 1.25rem;
+    font-weight: 700;
+  }
+  
+  input,
+  textarea {
+    margin-bottom: 1rem;
+    color: white;
+    background: #323644;
+    border: 0.125rem solid transparent;
+    border-radius: 1.125rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  input:hover,
+  input:focus,
+  textarea:hover,
+  textarea:focus {
+    outline: none;
+    border-color:  rgb(63,94,251) ;
+    box-shadow: 0 0 0 0.3125rem #26344a;
+  }
+  
+  label {
+    margin-bottom: 0.5rem;
+    color: #84868f;
+  }
+  
+  textarea {
+    min-height: 10.1rem;
+    resize: vertical;
+  }
+  
+  button{
+    border: none;
+    border-radius: 99px;
+    color: white;
+    /*background: #1d90f5;*/
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  button:hover,
+  button:focus {
+    outline: none;
+    background: rgb(63,94,251);
+    border-color: #59d795;
+  }
+  
+  button:disabled {
+    cursor: not-allowed;
+    background: #555b69;
+  }
+  
+  .success,
+  .error {
+    text-align: center;
+  }
+  
+  .success {
+    color: greenyellow;
+  }
+  
+  .error {
+    color: tomato;
+  }
+
+/*texto de esplicação*/
+
+.funciona{
+    display: flex;
+    width: 90%;
+    margin: 80px;
+    padding: 80px;
+    top: 0;
+    left: 0;
+
+
+    margin-bottom: 1rem;
+    color: white;
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    border: 0.125rem solid transparent;
+    border-radius: 1.125rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+
+  .editado{
+    font-size: 29px;
+    color: white;
+    opacity: 1;
+  }
+
+
+/*Rodapé*/
+
+
+.institucional{
+    display: flex;
+    text-decoration: none;
+    justify-content: space-between;
+    gap: 13px;
+    list-style: none;
+    margin: px;
+    padding: px;
+}
+
+.institucional li a{
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+}
+
+
+
+
+
+.fr{
+  /*background-color: transparent;
+  position: fixed;
+  bottom: 0;
+  color: #FFF;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;*/
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100px;
+    background-color: transparent;
+    text-decoration: none;
+    position: relative;
+    bottom: 0;
+    margin: 0px;
+    padding: 39px;
+}
+
+/*conteudo relacionado ao institucional*/
+
+.instt{display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: end;
+  color: white;
+  text-align: left;
+  margin: 13px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.prr{
+  margin: 12px;
+ text-align: center;
+ color: white;
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+ width: 50%;
+}
+
+.font{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 30px;
+  display: flex;
+}
+
+.linkmp{
+  text-decoration: underline;
+  color: rgb(70, 252, 140);
+  margin: 13px;
+  font-size: 20px;
+}
+
+.linkcl{
+  color: rgb(255, 255, 255);
+  margin: 13px;
+  font-size: 20px
+
+}
+
+li a.contt{
+  text-decoration: underline;
+  color: rgba(252,70,107,1);
+}
+
+.contt:hover{
+  text-decoration: underline;
+}
+
+
+.cokk{
+  background-color: #59d795;
+  width: 15%;
+}
+
+
+.CookieMessage {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #16223b;
+  z-index: 999;
+  display: none;
+}
+.CookieMessage-content {
+  color: white;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 20px 0 20px;
+  font-family: sans-serif;
+  line-height: 1.5;
+  font-size: 15px;
+}
+.CookieMessage-content a {
+  color: white;
+}
+.CookieMessage-content p {
+  margin: 0 0 20px 0;
+}
+.CookieMessage-button {
+  background: #00C2FF;
+  display: inline-block;
+  text-decoration: none;
+  padding: 5px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+.CookieMessage-button:hover {
+   background: #5cd9ff;
+}
